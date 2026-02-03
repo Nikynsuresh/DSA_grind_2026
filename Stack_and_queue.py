@@ -13,3 +13,13 @@ arr.sort()
 for i in range(len(arr)):
     m.append(arr[i])
 print(m)
+//queue//
+from collections import deque
+m=[]
+que=deque()
+for i in range(2,9):
+    que.appendleft(i)
+print(que)
+for j in range(len(que)):
+    a=que.popleft()
+    print(a)
