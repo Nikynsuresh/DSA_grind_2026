@@ -13,7 +13,7 @@ arr.sort()
 for i in range(len(arr)):
     m.append(arr[i])
 print(m)
-//queue//
+//queue using deque//
 from collections import deque
 m=[]
 que=deque()
