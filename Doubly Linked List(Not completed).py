@@ -27,11 +27,27 @@ class LinkedList:
     def insert_at_pos(self,data,pos):
         new=Node(data)
         temp=self.head
-        while count==pos-1:
+        if pos==0:
+            if self.head:
+                new.next=self.head
+                self.head.prev=new
+            self.head=new
+            return
+        count=0
+        while temp and count<pos-1:
             temp=temp.next
-            if not temp:
-                print("List out of index")
-                return
+            count+=1
+        if not temp:
+            print("List out of index")
+            return
+        new.next=temp.next
+        new.prev=temp
+        if temp.next:
+            temp.next=prev=new
+        temp.next=new
+        
+            
+            
             
         
     def display(self):
@@ -44,4 +60,5 @@ l1=LinkedList()
 l1.insert_at_end(90)
 l1.insert_at_end(80)
 l1.insert_at_begining(10)
+l1.insert_at_pos(40,1)
 l1.display()
