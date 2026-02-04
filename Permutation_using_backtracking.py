@@ -11,3 +11,4 @@ class Solution:
                 backtrack(new_curr,new_rem)
         backtrack([],nums)
         return final
+print(permute([1,2,3]))
